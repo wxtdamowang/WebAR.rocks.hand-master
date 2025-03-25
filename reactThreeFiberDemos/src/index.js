@@ -1,22 +1,21 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import React from "react";
+import { render } from "react-dom";
+import { AppContainer } from "react-hot-loader";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
-import './styles/index.scss'
+import "./styles/index.scss";
 
-import DemosMenu from './js/components/DemosMenu'
+import DemosMenu from "./js/components/DemosMenu";
 
-import DemoObjectManip from './js/demos/ObjectManip.js'
-import DemoBareFootVTO from './js/demos/BareFootVTO.js'
-import DemoNavigation from './js/demos/Navigation.js'
-import DemoVTO from './js/demos/VTO.js'
+import DemoObjectManip from "./js/demos/ObjectManip.js";
+import DemoBareFootVTO from "./js/demos/BareFootVTO.js";
+import DemoNavigation from "./js/demos/Navigation.js";
+import DemoVTO from "./js/demos/VTO.js";
 
 render(
   <AppContainer>
     <Router>
       <Switch>
-
         <Route path="/objectManip">
           <DemoObjectManip />
         </Route>
@@ -34,11 +33,10 @@ render(
         </Route>
 
         <Route path="/">
-          <DemosMenu />
+          <DemoVTO />
         </Route>
-
       </Switch>
     </Router>
   </AppContainer>,
-  document.querySelector('#root')
+  document.querySelector("#root")
 );
